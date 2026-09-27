@@ -204,46 +204,171 @@ function initSkillBars() {
    CONTACT ACTIONS & TOAST
    ========================================================================== */
 function initContactActions() {
+  const toEmail = 'yashvipatel856@gmail.com';
+
   // Email Copy Button
   const copyBtn = document.getElementById('copyEmailBtn');
   const heroCopyBtn = document.getElementById('heroCopyEmailBtn');
 
   const copyEmail = (e) => {
-    e.preventDefault();
-    const email = 'yashvipatel856@gmail.com';
-    navigator.clipboard.writeText(email).then(() => {
-      showToast('Copied email: yashvipatel856@gmail.com!');
+    if (e) e.preventDefault();
+    navigator.clipboard.writeText(toEmail).then(() => {
+      showToast(`Copied email: ${toEmail}!`);
     }).catch(() => {
-      showToast('Email: yashvipatel856@gmail.com');
+      showToast(`Email: ${toEmail}`);
     });
   };
 
   if (copyBtn) copyBtn.addEventListener('click', copyEmail);
   if (heroCopyBtn) heroCopyBtn.addEventListener('click', copyEmail);
 
-  // Contact Form
+  // Email Modal Opener Helper
+  window.openEmailModal = function(options = {}) {
+    const {
+      name = '',
+      email = '',
+      subject = '',
+      message = ''
+    } = options;
+
+    const fullSubject = subject ? `${subject} [from ${name || 'Portfolio Visitor'}]` : `Inquiry from ${name || 'Portfolio Visitor'}`;
+    const fullBody = (name || message) 
+      ? `Hi Yashvi,\n\n${message || '(Write your message here)'}\n\n---\nSender: ${name || 'Anonymous'}\nReply-To: ${email || 'Not provided'}`
+      : `Hi Yashvi,\n\nI came across your portfolio and would like to connect with you regarding...`;
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(toEmail)}&su=${encodeURIComponent(fullSubject)}&body=${encodeURIComponent(fullBody)}`;
+    const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=${encodeURIComponent(toEmail)}&subject=${encodeURIComponent(fullSubject)}&body=${encodeURIComponent(fullBody)}`;
+    const mailtoUrl = `mailto:${toEmail}?subject=${encodeURIComponent(fullSubject)}&body=${encodeURIComponent(fullBody)}`;
+
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalBody = document.getElementById('modalBody');
+    if (!modalOverlay || !modalBody) return;
+
+    modalBody.innerHTML = `
+      <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        <span>✉️</span> <span>Dispatch Email to Yashvi</span>
+      </h3>
+      <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+        Choose your preferred platform to compose and send directly to <strong>${toEmail}</strong>:
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 1.25rem;">
+        <!-- Option 1: Gmail Web -->
+        <a href="${gmailUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="justify-content: flex-start; text-align: left; padding: 0.85rem 1.25rem; background: linear-gradient(135deg, #ea4335, #c5221f); border: none;">
+          <span style="font-size: 1.35rem;">📧</span>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Send via Gmail (Web Browser)</div>
+            <div style="font-size: 0.78rem; opacity: 0.9;">Opens Gmail in a new tab with your message pre-filled</div>
+          </div>
+        </a>
+
+        <!-- Option 2: Outlook Web -->
+        <a href="${outlookUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="justify-content: flex-start; text-align: left; padding: 0.85rem 1.25rem; border-color: rgba(0, 120, 212, 0.4);">
+          <span style="font-size: 1.35rem;">📬</span>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem; color: #38bdf8;">Send via Outlook / Hotmail (Web)</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">Opens Outlook in browser ready to dispatch</div>
+          </div>
+        </a>
+
+        <!-- Option 3: Default Desktop Mail App -->
+        <a href="${mailtoUrl}" class="btn btn-secondary" style="justify-content: flex-start; text-align: left; padding: 0.85rem 1.25rem;">
+          <span style="font-size: 1.35rem;">💻</span>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Open Default Email Client</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">Uses your system's default software (Outlook, Mail, Thunderbird)</div>
+          </div>
+        </a>
+
+        <!-- Option 4: Copy to Clipboard -->
+        <button id="copyAllEmailInfoBtn" class="btn btn-secondary" style="justify-content: flex-start; text-align: left; padding: 0.85rem 1.25rem; cursor: pointer;">
+          <span style="font-size: 1.35rem;">📋</span>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Copy Email Address & Message</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">Copies to clipboard so you can paste into any email app</div>
+          </div>
+        </button>
+      </div>
+
+      <div style="background: rgba(0,0,0,0.25); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 0.85rem; font-size: 0.82rem; color: var(--text-secondary);">
+        💡 <strong>Direct Email Address:</strong> <code style="color: var(--accent-cyan); font-weight: bold;">${toEmail}</code>
+      </div>
+    `;
+
+    modalOverlay.classList.add('open');
+
+    const copyAllBtn = document.getElementById('copyAllEmailInfoBtn');
+    if (copyAllBtn) {
+      copyAllBtn.addEventListener('click', () => {
+        const copyPayload = `To: ${toEmail}\nSubject: ${fullSubject}\n\n${fullBody}`;
+        navigator.clipboard.writeText(copyPayload).then(() => {
+          showToast('Copied email & message to clipboard!');
+          modalOverlay.classList.remove('open');
+        });
+      });
+    }
+  };
+
+  // Hero email button trigger
+  const heroEmailModalBtn = document.getElementById('heroEmailModalBtn');
+  if (heroEmailModalBtn) {
+    heroEmailModalBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.openEmailModal();
+    });
+  }
+
+  // Contact card email link trigger
+  const contactCardEmailLink = document.getElementById('contactCardEmailLink');
+  if (contactCardEmailLink) {
+    contactCardEmailLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.openEmailModal();
+    });
+  }
+
+  // Contact Form handler
   const form = document.getElementById('portfolioContactForm');
+  const moreOptionsBtn = document.getElementById('openMoreEmailOptionsBtn');
+
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('senderName').value;
-      const email = document.getElementById('senderEmail').value;
-      const subject = document.getElementById('senderSubject').value;
-      const message = document.getElementById('senderMessage').value;
+      const name = document.getElementById('senderName').value.trim();
+      const email = document.getElementById('senderEmail').value.trim();
+      const subject = document.getElementById('senderSubject').value.trim();
+      const message = document.getElementById('senderMessage').value.trim();
 
       if (!name || !email || !message) {
         showToast('Please fill in all required fields.');
         return;
       }
 
-      // Generate mailto link
-      const mailtoLink = `mailto:yashvipatel856@gmail.com?subject=${encodeURIComponent(subject || 'Portfolio Inquiry from ' + name)}&body=${encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-      )}`;
+      const fullSubject = subject ? `${subject} [from ${name}]` : `Inquiry from ${name} via Portfolio`;
+      const fullBody = `Hi Yashvi,\n\n${message}\n\n---\nSender: ${name}\nEmail: ${email}`;
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(toEmail)}&su=${encodeURIComponent(fullSubject)}&body=${encodeURIComponent(fullBody)}`;
+
+      // Open Gmail directly in a new tab!
+      const newWin = window.open(gmailUrl, '_blank');
       
-      window.location.href = mailtoLink;
-      showToast('Opening your email client to dispatch message...');
-      form.reset();
+      if (!newWin || newWin.closed || typeof newWin.closed === 'undefined') {
+        // If popup was blocked, fallback to modal selector
+        window.openEmailModal({ name, email, subject, message });
+        showToast('Please select your preferred email service:');
+      } else {
+        showToast('Opened Gmail web composer with your message!');
+      }
+    });
+  }
+
+  if (moreOptionsBtn) {
+    moreOptionsBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('senderName') ? document.getElementById('senderName').value.trim() : '';
+      const email = document.getElementById('senderEmail') ? document.getElementById('senderEmail').value.trim() : '';
+      const subject = document.getElementById('senderSubject') ? document.getElementById('senderSubject').value.trim() : '';
+      const message = document.getElementById('senderMessage') ? document.getElementById('senderMessage').value.trim() : '';
+      window.openEmailModal({ name, email, subject, message });
     });
   }
 }
