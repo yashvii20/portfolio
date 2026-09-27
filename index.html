@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yashvi Patel | AI/ML Engineer & CS Researcher</title>
+  <meta name="description" content="Portfolio of Yashvi Patel - AI/ML Engineer, NLP Researcher, and GATE CS AIR 3011 Scholar. Fine-tuned T5 models, MediaPipe Computer Vision, published in IEEE Xplore.">
+  <meta name="keywords" content="Yashvi Patel, AI Engineer, Machine Learning, NLP, T5 Transformer, Computer Vision, MediaPipe, IIIT Delhi, CHARUSAT, GATE CS, IEEE Xplore">
+  <meta name="author" content="Yashvi Patel">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yashvi Patel | AI/ML Engineer & Researcher">
+  <meta property="og:description" content="Explore projects in NLP, Text-to-SQL, Computer Vision, and IEEE-published research.">
+  <meta property="og:image" content="assets/yashvi_patel.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background Canvas & Ambience -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand">
+        <div class="nav-logo-badge">YP</div>
+        <span>Yashvi Patel</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#publication" class="nav-link">Publication</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#demos" class="nav-link">Live Demos</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#awards" class="nav-link">Honors</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle theme">☀️</button>
+        <a href="assets/Yashvi_Patel_Resume.pdf" target="_blank" class="btn btn-primary btn-sm">
+          <span>📄</span>
+          <span>Resume</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#experience" class="mobile-nav-link">Experience</a>
+    <a href="#publication" class="mobile-nav-link">Publication</a>
+    <a href="#projects" class="mobile-nav-link">Projects</a>
+    <a href="#demos" class="mobile-nav-link">Live Demos</a>
+    <a href="#skills" class="mobile-nav-link">Skills</a>
+    <a href="#awards" class="mobile-nav-link">Honors</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <a href="assets/Yashvi_Patel_Resume.pdf" target="_blank" class="btn btn-primary btn-sm" style="text-align: center; margin-top: 0.5rem;">
+      📄 Download Resume
+    </a>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-status-pill">
+            <span class="status-dot"></span>
+            <span>Open to AI/ML & Research Opportunities</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="text-gradient">Yashvi Patel</span>
+          </h1>
+
+          <div class="hero-typed-wrapper">
+            <span>Specializing in</span>
+            <span class="typed-text" id="typedText"></span>
+            <span class="typing-cursor"></span>
+          </div>
+
+          <p class="hero-bio">
+            Computer Science engineer driven by building <strong>scalable intelligent systems</strong>, 
+            <strong>deep learning pipelines</strong>, and <strong>practical NLP solutions</strong>. Published researcher in IEEE Xplore, 
+            GATE CS <strong>AIR 3011 (98.5%ile)</strong>, and incoming scholar at <strong>IIIT Delhi</strong>.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>⚡ Explore Projects</span>
+            </a>
+            <a href="#demos" class="btn btn-secondary">
+              <span>🎮 Test Live Demos</span>
+            </a>
+            <a href="assets/Yashvi_Patel_Resume.pdf" target="_blank" class="btn btn-secondary">
+              <span>📥 Download CV</span>
+            </a>
+          </div>
+
+          <div class="hero-social-links">
+            <a href="https://www.linkedin.com/in/yashvi-patel-6a3a37250/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://github.com/yashvii20" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="mailto:yashvipatel856@gmail.com" class="social-icon-btn" title="Send Email">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.26l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+            </a>
+            <button id="heroCopyEmailBtn" class="social-icon-btn" title="Copy Email to Clipboard">
+              📋
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-avatar-wrapper">
+            <div class="avatar-backdrop-glow"></div>
+            <div class="hero-avatar-card">
+              <img src="assets/yashvi_patel.jpg" alt="Yashvi Patel Portrait" class="hero-avatar-img">
+            </div>
+
+            <!-- Floating Highlights -->
+            <div class="floating-badge floating-badge-1">
+              <div class="badge-icon blue">🏆</div>
+              <div class="badge-content">
+                <h4>AIR 3011</h4>
+                <p>GATE CSIT 2026 (98.5%ile)</p>
+              </div>
+            </div>
+
+            <div class="floating-badge floating-badge-2">
+              <div class="badge-icon purple">📜</div>
+              <div class="badge-content">
+                <h4>IEEE Published</h4>
+                <p>Scopus Indexed Research</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         METRICS / HIGHLIGHTS BAR
+         ========================================================================== -->
+    <section class="stats-bar-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value">9.44 / 10</div>
+            <div class="stat-label">B.Tech Academic CGPA</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">98.5 %ile</div>
+            <div class="stat-label">GATE CSIT 2026 (AIR 3011)</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">5,000+</div>
+            <div class="stat-label">NL–SQL Pairs Curated</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">Top 5%</div>
+            <div class="stat-label">NPTEL Elite DBMS Performer</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT ME & EDUCATION
+         ========================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Academic Profile</div>
+          <h2 class="section-title">Bridging Theory & <span class="text-gradient">Applied AI</span></h2>
+          <p class="section-subtitle">
+            Deep foundational knowledge in computer science coupled with practical experience engineering neural architectures.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="glass-card about-text">
+            <h3 style="font-size: 1.35rem; margin-bottom: 1rem;">Who I Am</h3>
+            <p>
+              I am an engineering graduate and researcher specializing in <strong>Natural Language Processing</strong>, 
+              <strong>Transformer fine-tuning</strong>, and <strong>Computer Vision systems</strong>. My approach centers on constructing 
+              production-grade machine learning systems that operate with high fidelity, verified schema safety, and minimal inference latency.
+            </p>
+            <p>
+              During my internship at <strong>StoreApps (Mumbai)</strong>, I spearheaded the text-to-SQL pipeline fine-tuning <strong>T5 models</strong> 
+              over 5,000+ custom domain pairs and optimizing multi-engine SQL queries across <strong>ClickHouse</strong> and <strong>PostgreSQL</strong>.
+            </p>
+            <p>
+              I also published peer-reviewed research in <strong>IEEE Xplore</strong> at ICACRS 2024 on real-time classroom posture monitoring using 
+              MediaPipe keypoints, providing instantaneous automated feedback to improve student ergonomics.
+            </p>
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+              <span class="tech-tag">📍 Palanpur & New Delhi, India</span>
+              <span class="tech-tag">🎓 Roll No: MT26106</span>
+              <span class="tech-tag">💼 Open for Roles</span>
+            </div>
+          </div>
+
+          <div class="education-cards">
+            <!-- IIIT Delhi Card -->
+            <div class="glass-card edu-card iiitd">
+              <div class="edu-header">
+                <div class="edu-school">Indraprastha Institute of Information Technology Delhi (IIIT-D)</div>
+                <div class="edu-year">2026 — Present</div>
+              </div>
+              <div class="edu-degree">M.Tech in Computer Science and Engineering</div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
+                Admitted through GATE CSIT excellence (AIR 3011, 98.5th Percentile). Specializing in Advanced Machine Learning, Algorithmic Systems, and Intelligent Data Systems.
+              </p>
+              <div class="edu-score">
+                <span>🏛️ Roll No: MT26106</span>
+              </div>
+            </div>
+
+            <!-- CHARUSAT Card -->
+            <div class="glass-card edu-card">
+              <div class="edu-header">
+                <div class="edu-school">Charotar University of Science and Technology (CHARUSAT)</div>
+                <div class="edu-year">2022 — 2026</div>
+              </div>
+              <div class="edu-degree">B.Tech in Computer Science and Engineering</div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
+                Consistently ranked at the top tier of the department with an outstanding academic record across core algorithms, systems, and mathematics.
+              </p>
+              <div class="edu-score">
+                <span>🌟 CGPA: 9.44 / 10.0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WORK EXPERIENCE
+         ========================================================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Career Milestones</div>
+          <h2 class="section-title">Industry <span class="text-gradient">Experience</span></h2>
+          <p class="section-subtitle">
+            Hands-on software and machine learning engineering roles building scalable solutions.
+          </p>
+        </div>
+
+        <div class="experience-timeline">
+          <!-- StoreApps -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">AI / ML Engineer Intern</h3>
+                  <div class="exp-company">StoreApps — Mumbai, India</div>
+                </div>
+                <div class="exp-duration">May 2025 — Aug 2025</div>
+              </div>
+
+              <div class="exp-location">
+                <span>📍 Mumbai (Hybrid) • Machine Learning & Analytics Team</span>
+              </div>
+
+              <ul class="exp-bullets">
+                <li>Designed and implemented an end-to-end system translating natural language queries into syntactically valid and executable SQL statements.</li>
+                <li>Fine-tuned the <strong>T5 (Text-to-Text Transformer)</strong> model using <strong>Hugging Face</strong> for structured text-to-SQL generation.</li>
+                <li>Constructed, curated, and validated a high-quality dataset of <strong>5,000+ NL–SQL pairs</strong> for supervised model training and few-shot evaluation.</li>
+                <li>Developed a robust schema-aware generation and validation pipeline enforcing strict syntactic and semantic database correctness.</li>
+                <li>Integrated <strong>PostgreSQL</strong> and <strong>ClickHouse</strong> backends for real-time dynamic query execution, benchmarking, and systematic result verification.</li>
+                <li>Conducted structured error analysis across multi-table joins, complex aggregations, and nested queries, boosting overall model execution accuracy.</li>
+              </ul>
+
+              <div class="exp-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Hugging Face</span>
+                <span class="tech-tag">T5 Transformer</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">ClickHouse</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">PyTorch</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Purvi Softech -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Web Development Intern</h3>
+                  <div class="exp-company">Purvi Softech — Palanpur, India</div>
+                </div>
+                <div class="exp-duration">Jun 2024 — Jul 2024</div>
+              </div>
+
+              <div class="exp-location">
+                <span>📍 Palanpur • Full-Stack Web Development</span>
+              </div>
+
+              <ul class="exp-bullets">
+                <li>Designed and engineered a centralized smart school bus transportation management system.</li>
+                <li>Implemented transit route calculation and real-time alert modules for parents and dispatchers to enhance student safety.</li>
+                <li>Developed interactive driver dashboards, student check-in telemetry, and administrative control panels.</li>
+              </ul>
+
+              <div class="exp-tech-tags">
+                <span class="tech-tag">Web Development</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">Routing Systems</span>
+                <span class="tech-tag">Real-Time Alerts</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         RESEARCH & PUBLICATIONS
+         ========================================================================== -->
+    <section class="section" id="publication">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Peer-Reviewed Research</div>
+          <h2 class="section-title">Peer-Reviewed <span class="text-gradient">Publications</span></h2>
+          <p class="section-subtitle">
+            Two published research contributions indexed in Scopus across IEEE Xplore and Springer Nature.
+          </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem;">
+          <!-- Publication 1: IEEE Xplore -->
+          <div class="glass-card publication-card">
+            <div class="pub-badge-row">
+              <span class="pub-badge ieee">IEEE Xplore</span>
+              <span class="pub-badge scopus">Scopus Indexed</span>
+              <span class="pub-badge icacrs">ICACRS 2024</span>
+              <span class="pub-badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3);">
+                Published Conference Paper
+              </span>
+            </div>
+
+            <h3 class="pub-title">
+              Real-Time Sitting Student Posture Detection for Students in Classroom Environment
+            </h3>
+
+            <div class="pub-authors">
+              <strong>Yashvi Patel</strong>, et al. • Presented at ICACRS 2024 (International Conference on Automation, Computing and Renewable Systems)
+            </div>
+
+            <div class="pub-abstract">
+              <strong>Abstract:</strong> Prolonged improper sitting posture during classroom instruction leads to severe musculoskeletal strain, chronic back pain, and reduced cognitive engagement among students. This research proposes a real-time, non-invasive posture monitoring and correction framework powered by Python and Google MediaPipe Pose estimation. By analyzing spatial angular deviations in the spinal vector and craniovertebral angle across 33 keypoints, the system detects slouching, asymmetric weight distribution, and forward head posture, triggering automated ergonomic feedback alerts with minimal computational overhead.
+            </div>
+
+            <ul class="pub-highlights-list">
+              <li class="pub-highlight-item">
+                <i>✓</i> <span>Real-time 33-landmark 3D pose extraction via MediaPipe running at 30+ FPS</span>
+              </li>
+              <li class="pub-highlight-item">
+                <i>✓</i> <span>Custom angular thresholding algorithms for spinal vector & craniovertebral angles</span>
+              </li>
+              <li class="pub-highlight-item">
+                <i>✓</i> <span>Automated visual and acoustic feedback loop for real-time posture correction</span>
+              </li>
+              <li class="pub-highlight-item">
+                <i>✓</i> <span>Peer-reviewed, presented at ICACRS 2024, and permanently indexed on Scopus</span>
+              </li>
+            </ul>
+
+            <div class="pub-actions">
+              <a href="https://doi.org/10.1109/ICACRS62842.2024.10841644" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <span>🔗 View on IEEE Xplore</span>
+              </a>
+              <a href="assets/Posture_Detection_IEEE_Paper.pdf" target="_blank" class="btn btn-secondary btn-sm">
+                <span>📄 View Paper PDF</span>
+              </a>
+              <button class="btn btn-secondary btn-sm view-bibtex-btn" data-paper="ieee">
+                <span>📜 Cite BibTeX</span>
+              </button>
+              <div class="doi-pill" style="margin-left: auto;">
+                DOI: 10.1109/ICACRS62842.2024.10841644
+              </div>
+            </div>
+          </div>
+
+          <!-- Publication 2: Springer Nature -->
+          <div class="glass-card publication-card" style="border-color: rgba(245, 158, 11, 0.3);">
+            <div class="pub-badge-row">
+              <span class="pub-badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.4);">Springer Nature</span>
+              <span class="pub-badge scopus">Scopus Indexed</span>
+              <span class="pub-badge" style="background: rgba(56, 189, 248, 0.12); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">LNNS Vol. 1319</span>
+              <span class="pub-badge" style="background: rgba(168, 85, 247, 0.12); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);">ICTCS 2024</span>
+            </div>
+
+            <h3 class="pub-title">
+              From Campus Life to Career Prospects: Analyzing Key Determinants in Student University Selection
+            </h3>
+
+            <div class="pub-authors">
+              Prem Trivedi, Manan Patel, <strong>Yashvi Patel</strong>, Drashti Bhatt, Hardikkumar Jayswal, Nilesh Dubey, Rajendra Solanki • Published in <em>Intelligent Strategies for ICT</em>, Springer Singapore
+            </div>
+
+            <div class="pub-abstract">
+              <strong>Abstract:</strong> This research investigates the multi-criteria decision dynamics governing how prospective higher education students select colleges and universities. Grounded in a comprehensive empirical survey of 496 student respondents, the study models the comparative impact of academic reputation, job placement services, tuition costs, financial aid availability, campus infrastructure, and institutional diversity, delivering actionable data-driven insights for educational policy and institutional enrollment strategies.
+            </div>
+
+            <ul class="pub-highlights-list">
+              <li class="pub-highlight-item">
+                <i>✓</i> <span>Empirical survey modeling and quantitative analysis across 496 student participants</span>
+              </li>
+              <li class="pub-highlight-item">
+                <i>✓</i> <span>Statistical evaluation of practical, financial, academic, and social choice determinants</span>
+              </li>
+              <li class="pub-highlight-item">
+                <i>✓</i> <span>Book chapter in Lecture Notes in Networks and Systems (LNNS, volume 1319)</span>
+              </li>
+              <li class="pub-highlight-item">
+                <i>✓</i> <span>Presented at ICTCS 2024, published by Springer Nature, indexed in Scopus</span>
+              </li>
+            </ul>
+
+            <div class="pub-actions">
+              <a href="https://doi.org/10.1007/978-981-96-4145-1_26" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                <span>🔗 View on SpringerLink</span>
+              </a>
+              <button class="btn btn-secondary btn-sm view-bibtex-btn" data-paper="springer">
+                <span>📜 Cite BibTeX</span>
+              </button>
+              <div class="doi-pill" style="margin-left: auto;">
+                DOI: 10.1007/978-981-96-4145-1_26
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FEATURED PROJECTS
+         ========================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Engineering Portfolio</div>
+          <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+          <p class="section-subtitle">
+            End-to-end architectures spanning NLP, deep learning, computer vision, and systems engineering.
+          </p>
+        </div>
+
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="ml-nlp">Machine Learning & NLP</button>
+          <button class="filter-btn" data-filter="cv">Computer Vision</button>
+          <button class="filter-btn" data-filter="systems">Full Stack & Systems</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 0: Atelier Project Management -->
+          <div class="glass-card project-card" data-category="systems">
+            <div class="project-card-top">
+              <div class="project-card-header">
+                <div class="project-icon-box" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border-color: rgba(99, 102, 241, 0.3);">📐</div>
+                <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+                  <span style="padding: 0.2rem 0.65rem; border-radius: var(--radius-full); font-size: 0.72rem; font-weight: 700; background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3);">LIVE DEPLOYED</span>
+                  <div class="project-date">Full-Stack Web App</div>
+                </div>
+              </div>
+              <h3 class="project-title">Atelier — Project & Architectural Collaboration Platform</h3>
+              <p class="project-description">
+                Comprehensive collaborative project management and architecture studio application featuring drag-and-drop task boards, visual mood boards, and real-time activity streams.
+              </p>
+              <ul class="project-highlights">
+                <li>Engineered interactive Kanban boards with drag-and-drop state updates, progress bars, and priority tags.</li>
+                <li>Built visual design mood boards with client-side image compression, multi-file uploads, and status workflows.</li>
+                <li>Implemented Supabase backend with PostgreSQL, real-time activity streams, threaded comments, and secure JWT authentication.</li>
+                <li>Integrated dynamic architectural client documentation and specification export using <strong>jsPDF</strong>.</li>
+                <li>Deployed live on Cloudflare Workers / Vercel with single-page application (SPA) client-side rewrite routing.</li>
+              </ul>
+            </div>
+            <div class="project-card-bottom">
+              <div class="project-tech-tags">
+                <span class="tech-tag">React 19</span>
+                <span class="tech-tag">Supabase</span>
+                <span class="tech-tag">Cloudflare Workers</span>
+                <span class="tech-tag">Vite</span>
+                <span class="tech-tag">jsPDF</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/yashvii20/Proj_Management" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex: 1;">
+                  <span>🐙 GitHub Repo</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 1: NL-to-SQL -->
+          <div class="glass-card project-card" data-category="ml-nlp">
+            <div class="project-card-top">
+              <div class="project-card-header">
+                <div class="project-icon-box">🧠</div>
+                <div class="project-date">May 2025 — Aug 2025</div>
+              </div>
+              <h3 class="project-title">End-to-End NL-to-SQL Translation Engine</h3>
+              <p class="project-description">
+                Fine-tuned T5 transformer pipeline that converts complex natural language inquiries into executable SQL queries with strict database schema awareness.
+              </p>
+              <ul class="project-highlights">
+                <li>Curated 5,000+ domain-specific NL-SQL paired datasets with multi-table joins.</li>
+                <li>Engineered validation layer verifying syntax, join paths, and column existence.</li>
+                <li>Dynamic dual-backend execution across ClickHouse (OLAP) and PostgreSQL (OLTP).</li>
+              </ul>
+            </div>
+            <div class="project-card-bottom">
+              <div class="project-tech-tags">
+                <span class="tech-tag">T5 Transformer</span>
+                <span class="tech-tag">Hugging Face</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">ClickHouse</span>
+                <span class="tech-tag">Python</span>
+              </div>
+              <div class="project-actions">
+                <a href="#demos" class="btn btn-secondary btn-sm" style="flex: 1;">🎮 Interactive Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Posture Detection -->
+          <div class="glass-card project-card" data-category="cv">
+            <div class="project-card-top">
+              <div class="project-card-header">
+                <div class="project-icon-box purple">👁️</div>
+                <div class="project-date">Jul 2024 — Sept 2024</div>
+              </div>
+              <h3 class="project-title">Real-Time Classroom Posture Detection</h3>
+              <p class="project-description">
+                Computer vision solution utilizing Google MediaPipe pose estimation to detect sitting posture irregularities and deliver live ergonomic correction alerts.
+              </p>
+              <ul class="project-highlights">
+                <li>Extracts 33 anatomical landmarks to calculate spine angle and neck inclination.</li>
+                <li>Generates real-time classroom telemetry logs and automated student alerts.</li>
+                <li>Formed basis of research published in IEEE Xplore (Scopus indexed).</li>
+              </ul>
+            </div>
+            <div class="project-card-bottom">
+              <div class="project-tech-tags">
+                <span class="tech-tag">MediaPipe</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pose Estimation</span>
+                <span class="tech-tag">IEEE Xplore</span>
+              </div>
+              <div class="project-actions">
+                <a href="#demos" class="btn btn-secondary btn-sm" style="flex: 1;">🎮 Live Simulator</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Skin Cancer CNN -->
+          <div class="glass-card project-card" data-category="cv ml-nlp">
+            <div class="project-card-top">
+              <div class="project-card-header">
+                <div class="project-icon-box emerald">🩺</div>
+                <div class="project-date">Deep Learning Project</div>
+              </div>
+              <h3 class="project-title">Skin Cancer Classification using Deep CNN</h3>
+              <p class="project-description">
+                Convolutional neural network for dermoscopic image classification to distinguish malignant lesions from benign skin abnormalities.
+              </p>
+              <ul class="project-highlights">
+                <li>Preprocessed high-resolution dermoscopy datasets with color normalization.</li>
+                <li>Applied extensive data augmentation (rotation, shearing, affine transforms) & regularization (Dropout, BatchNorm) to mitigate class imbalance.</li>
+                <li>Evaluated multi-class predictions using confusion matrices, precision-recall, and ROC-AUC.</li>
+              </ul>
+            </div>
+            <div class="project-card-bottom">
+              <div class="project-tech-tags">
+                <span class="tech-tag">CNN</span>
+                <span class="tech-tag">Deep Learning</span>
+                <span class="tech-tag">PyTorch / TF</span>
+                <span class="tech-tag">Image Classification</span>
+                <span class="tech-tag">Medical Imaging</span>
+              </div>
+              <div class="project-actions">
+                <a href="#contact" class="btn btn-secondary btn-sm" style="flex: 1;">💬 Discuss Architecture</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Smart School Bus System -->
+          <div class="glass-card project-card" data-category="systems">
+            <div class="project-card-top">
+              <div class="project-card-header">
+                <div class="project-icon-box">🚌</div>
+                <div class="project-date">Jun 2024 — Jul 2024</div>
+              </div>
+              <h3 class="project-title">Smart School Bus Fleet Routing & Alert System</h3>
+              <p class="project-description">
+                Real-time school transit tracking and safety dispatch platform providing live route optimization and instant parent notification alerts.
+              </p>
+              <ul class="project-highlights">
+                <li>Designed automated route sequencing algorithm to minimize transit delays.</li>
+                <li>Integrated push alert trigger module notifying parents when bus is within 1 km.</li>
+                <li>Built intuitive administrator portal for managing drivers, vehicles, and student logs.</li>
+              </ul>
+            </div>
+            <div class="project-card-bottom">
+              <div class="project-tech-tags">
+                <span class="tech-tag">Web Development</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Routing Systems</span>
+              </div>
+              <div class="project-actions">
+                <a href="#contact" class="btn btn-secondary btn-sm" style="flex: 1;">💬 Inquire Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE DEMOS SECTION
+         ========================================================================== -->
+    <section class="section" id="demos" style="background: rgba(15, 23, 42, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Hands-On Demos</div>
+          <h2 class="section-title">Interactive <span class="text-gradient">Playgrounds</span></h2>
+          <p class="section-subtitle">
+            Experience the logic and algorithms behind my key research and engineering projects right in your browser.
+          </p>
+        </div>
+
+        <div class="demos-wrapper">
+          <!-- Demo 1: NL to SQL Generator -->
+          <div class="demo-container">
+            <div class="demo-header">
+              <div class="demo-title-group">
+                <h3>⚡ Natural Language to SQL Generator</h3>
+                <p>Simulating the fine-tuned T5 transformer pipeline trained at StoreApps</p>
+              </div>
+              <div class="demo-tabs">
+                <button class="demo-tab-btn active" data-engine="postgres">🐘 PostgreSQL</button>
+                <button class="demo-tab-btn" data-engine="clickhouse">⚡ ClickHouse</button>
+              </div>
+            </div>
+
+            <div class="demo-body">
+              <div class="sql-demo-grid">
+                <div class="sql-input-pane">
+                  <div class="preset-queries-label">Select Example Query:</div>
+                  <div class="preset-chips">
+                    <button class="preset-chip active" data-query="Find all customers with total purchases exceeding $500 in 2025">
+                      "Find all customers with total purchases exceeding $500 in 2025"
+                    </button>
+                    <button class="preset-chip" data-query="Calculate monthly revenue and active user count for Q2 2025">
+                      "Calculate monthly revenue and active user count for Q2 2025"
+                    </button>
+                    <button class="preset-chip" data-query="List top 5 products with highest return rate along with warehouse inventory">
+                      "List top 5 products with highest return rate along with warehouse inventory"
+                    </button>
+                    <button class="preset-chip" data-query="Identify students whose posture slouch duration exceeded 15 minutes today">
+                      "Identify students whose posture slouch duration exceeded 15 minutes today"
+                    </button>
+                  </div>
+
+                  <div class="preset-queries-label" style="margin-top: 0.5rem;">Or Enter Custom Natural Language Prompt:</div>
+                  <div class="sql-custom-input-box">
+                    <input type="text" id="sqlQueryInput" class="sql-input-field" placeholder="e.g., Get top 10 products by profit margin...">
+                    <button id="sqlGenerateBtn" class="btn btn-primary btn-sm">Generate SQL</button>
+                  </div>
+                </div>
+
+                <div class="sql-output-pane">
+                  <div class="code-editor-box">
+                    <div class="code-editor-top">
+                      <div class="window-dots">
+                        <div class="window-dot red"></div>
+                        <div class="window-dot yellow"></div>
+                        <div class="window-dot green"></div>
+                      </div>
+                      <span id="editorLanguageLabel">generated_query.sql</span>
+                      <span>UTF-8</span>
+                    </div>
+                    <div class="code-editor-content" id="sqlCodeOutput">
+                      -- Generating query...
+                    </div>
+                  </div>
+
+                  <div class="sql-meta-stats">
+                    <span id="statTokens">Tokens: 42</span>
+                    <span id="statLatency">Inference: 14.8 ms</span>
+                    <span id="statConfidence" style="color: var(--accent-emerald);">Confidence: 99.4%</span>
+                    <span style="color: var(--accent-cyan);">Schema: Validated ✓</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demo 2: Posture Detection Simulator -->
+          <div class="demo-container">
+            <div class="demo-header">
+              <div class="demo-title-group">
+                <h3>🧍 Real-Time Posture Angle & Feedback Simulator</h3>
+                <p>Interactive 2D simulation of the MediaPipe pose estimation model published in IEEE Xplore</p>
+              </div>
+              <div id="postureAlertBadge" style="padding: 0.35rem 0.85rem; border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 700; background: rgba(16, 185, 129, 0.2); color: #10b981;">
+                NORMAL POSTURE
+              </div>
+            </div>
+
+            <div class="demo-body">
+              <div class="posture-demo-grid">
+                <div class="posture-canvas-wrapper">
+                  <canvas id="postureCanvas" width="380" height="360"></canvas>
+                </div>
+
+                <div class="posture-controls">
+                  <div class="slider-group">
+                    <div class="slider-label-row">
+                      <span>Spine Slouch Angle:</span>
+                      <span class="slider-val" id="spineValText">10°</span>
+                    </div>
+                    <input type="range" id="spineSlider" class="posture-slider" min="0" max="45" value="10">
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">Normal: 0°–20° | Slouch: &gt;22°</span>
+                  </div>
+
+                  <div class="slider-group">
+                    <div class="slider-label-row">
+                      <span>Craniovertebral (Neck Forward) Angle:</span>
+                      <span class="slider-val" id="neckValText">12°</span>
+                    </div>
+                    <input type="range" id="neckSlider" class="posture-slider" min="0" max="40" value="12">
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">Normal: 5°–20° | Forward Head: &gt;25°</span>
+                  </div>
+
+                  <div class="posture-status-box" id="postureStatusBox">
+                    <div class="status-indicator-icon" id="postureStatusIcon">✅</div>
+                    <div class="status-details">
+                      <h4 id="postureStatusTitle">Ergonomically Sound Posture</h4>
+                      <p id="postureStatusDesc">Spine & neck keypoints aligned within safe classroom ergonomic limits.</p>
+                    </div>
+                  </div>
+
+                  <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; background: rgba(0,0,0,0.2); padding: 0.85rem; border-radius: var(--radius-md);">
+                    💡 <em>Move the sliders to simulate a student slouching forward in class. The algorithm tracks keypoint vectors in real time and automatically triggers corrective feedback once the ergonomic thresholds are breached.</em>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SKILLS & TECHNOLOGIES
+         ========================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Core Competencies</div>
+          <h2 class="section-title">Technical <span class="text-gradient">Skill Matrix</span></h2>
+          <p class="section-subtitle">
+            Languages, frameworks, databases, and foundational computer science pillars.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- ML / NLP -->
+          <div class="glass-card skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">🤖</div>
+              <h3 class="skill-cat-title">AI, ML & NLP</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Hugging Face & Transformers</span>
+                  <span>95%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="95%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>T5 Model Fine-Tuning</span>
+                  <span>92%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>MediaPipe & OpenCV</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>CNNs & Deep Learning</span>
+                  <span>88%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Model Evaluation & Metrics</span>
+                  <span>94%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="94%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Programming Languages -->
+          <div class="glass-card skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">💻</div>
+              <h3 class="skill-cat-title">Languages</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Python</span>
+                  <span>96%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="96%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>C++ (Data Structures)</span>
+                  <span>92%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Java (NPTEL Certified)</span>
+                  <span>88%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>SQL (Complex Queries)</span>
+                  <span>95%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="95%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>JavaScript & PHP</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Databases & Systems -->
+          <div class="glass-card skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">🗄️</div>
+              <h3 class="skill-cat-title">Databases & Web</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>PostgreSQL (Relational OLTP)</span>
+                  <span>92%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>ClickHouse (Columnar OLAP)</span>
+                  <span>88%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>React 19 & Supabase</span>
+                  <span>92%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>HTML5, CSS3, JavaScript</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>ASP.NET & Backend APIs</span>
+                  <span>82%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="82%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Git, Linux & Model Pipelines</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core CS Subjects Badges -->
+        <div class="glass-card" style="margin-top: 2rem; padding: 1.5rem; text-align: center;">
+          <h4 style="font-size: 1.05rem; margin-bottom: 1rem; color: var(--accent-cyan);">
+            🏛️ Solid CS Core Theoretical Foundation
+          </h4>
+          <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 0.75rem;">
+            <span class="tech-tag" style="padding: 0.4rem 1rem; font-size: 0.85rem;">Data Structures & Algorithms</span>
+            <span class="tech-tag" style="padding: 0.4rem 1rem; font-size: 0.85rem;">Operating Systems</span>
+            <span class="tech-tag" style="padding: 0.4rem 1rem; font-size: 0.85rem;">Database Management Systems</span>
+            <span class="tech-tag" style="padding: 0.4rem 1rem; font-size: 0.85rem;">Theory of Computation (Automata)</span>
+            <span class="tech-tag" style="padding: 0.4rem 1rem; font-size: 0.85rem;">Supervised Machine Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         AWARDS & ACHIEVEMENTS
+         ========================================================================== -->
+    <section class="section" id="awards">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Recognition</div>
+          <h2 class="section-title">Honors & <span class="text-gradient">Achievements</span></h2>
+          <p class="section-subtitle">
+            National competitive examinations, professional certifications, and hackathons.
+          </p>
+        </div>
+
+        <div class="awards-grid">
+          <!-- Award 1: GATE 2026 -->
+          <div class="glass-card award-card">
+            <div class="award-icon-row">
+              <span class="award-medal">🥇</span>
+              <span class="award-rank-pill">AIR 3011</span>
+            </div>
+            <h3 class="award-title">GATE CSIT 2026</h3>
+            <div class="award-subtitle">Secured 98.5th Percentile</div>
+            <p class="award-desc">
+              National Graduate Aptitude Test in Engineering for Computer Science & Information Technology out of over 150,000+ candidates nationwide.
+            </p>
+          </div>
+
+          <!-- Award 2: GATE 2025 -->
+          <div class="glass-card award-card">
+            <div class="award-icon-row">
+              <span class="award-medal">🥈</span>
+              <span class="award-rank-pill">AIR 3917</span>
+            </div>
+            <h3 class="award-title">GATE CSIT 2025</h3>
+            <div class="award-subtitle">Secured 97.7th Percentile</div>
+            <p class="award-desc">
+              Achieved top 2.3% nationwide in the 3rd year of undergraduate studies, confirming consistency across algorithmic and system subjects.
+            </p>
+          </div>
+
+          <!-- Award 3: NPTEL DBMS Top 5% -->
+          <div class="glass-card award-card">
+            <div class="award-icon-row">
+              <span class="award-medal">🏆</span>
+              <span class="award-rank-pill" style="color: #10b981; border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.1);">TOP 5%</span>
+            </div>
+            <h3 class="award-title">NPTEL DBMS Elite Certification</h3>
+            <div class="award-subtitle">Recognized in Top 5% Performers</div>
+            <p class="award-desc">
+              Awarded Elite ranking by IIT Kharagpur/Madras for advanced mastery in relational algebra, query optimization, indexing, and transaction protocols.
+            </p>
+          </div>
+
+          <!-- Award 4: NPTEL Java -->
+          <div class="glass-card award-card">
+            <div class="award-icon-row">
+              <span class="award-medal">☕</span>
+              <span class="award-rank-pill" style="color: #38bdf8; border-color: rgba(56,189,248,0.3); background: rgba(56,189,248,0.1);">CERTIFIED</span>
+            </div>
+            <h3 class="award-title">NPTEL Programming in Java</h3>
+            <div class="award-subtitle">Elite Technical Certification</div>
+            <p class="award-desc">
+              Comprehensive certification in Object-Oriented Design, concurrency, multithreading, and enterprise Java principles.
+            </p>
+          </div>
+
+          <!-- Award 5: SIH 2024 -->
+          <div class="glass-card award-card">
+            <div class="award-icon-row">
+              <span class="award-medal">💡</span>
+              <span class="award-rank-pill">HACKATHON</span>
+            </div>
+            <h3 class="award-title">Smart India Hackathon (SIH) 2024</h3>
+            <div class="award-subtitle">Cleared Initial Round</div>
+            <p class="award-desc">
+              Selected through rigorous nationwide rounds for engineering innovative technological solutions addressing real-world problem statements.
+            </p>
+          </div>
+
+          <!-- Award 6: IEEE Xplore Scopus Indexed -->
+          <div class="glass-card award-card">
+            <div class="award-icon-row">
+              <span class="award-medal">📜</span>
+              <span class="award-rank-pill" style="color: #c084fc; border-color: rgba(192,132,252,0.3); background: rgba(192,132,252,0.1);">PUBLISHED</span>
+            </div>
+            <h3 class="award-title">IEEE Xplore Author</h3>
+            <div class="award-subtitle">Scopus Indexed Publication</div>
+            <p class="award-desc">
+              Research on computer vision posture analysis published with official Digital Object Identifier (DOI: 10.1109/ICACRS62842.2024.10841644).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION
+         ========================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Let's Connect</div>
+          <h2 class="section-title">Get In <span class="text-gradient">Touch</span></h2>
+          <p class="section-subtitle">
+            I am currently open to full-time AI/ML engineering roles, graduate research collaborations, and software opportunities.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-cards">
+            <!-- Email -->
+            <div class="contact-item-card">
+              <div class="contact-item-icon">📧</div>
+              <div class="contact-item-details">
+                <h4>Direct Email</h4>
+                <a href="mailto:yashvipatel856@gmail.com">yashvipatel856@gmail.com</a>
+              </div>
+              <button class="copy-email-btn" id="copyEmailBtn" title="Copy to clipboard">Copy</button>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact-item-card">
+              <div class="contact-item-icon">💼</div>
+              <div class="contact-item-details">
+                <h4>LinkedIn Profile</h4>
+                <a href="https://www.linkedin.com/in/yashvi-patel-6a3a37250/" target="_blank" rel="noopener noreferrer">
+                  linkedin.com/in/yashvi-patel
+                </a>
+              </div>
+            </div>
+
+            <!-- GitHub -->
+            <div class="contact-item-card">
+              <div class="contact-item-icon">🐙</div>
+              <div class="contact-item-details">
+                <h4>GitHub Repository</h4>
+                <a href="https://github.com/yashvii20" target="_blank" rel="noopener noreferrer">
+                  github.com/yashvii20
+                </a>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-item-card">
+              <div class="contact-item-icon">📍</div>
+              <div class="contact-item-details">
+                <h4>Location</h4>
+                <p>Palanpur, Gujarat & New Delhi, India</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="glass-card">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1.25rem;">Send a Direct Message</h3>
+            <form id="portfolioContactForm" class="contact-form">
+              <div class="form-group">
+                <label for="senderName">Your Name *</label>
+                <input type="text" id="senderName" class="form-input" placeholder="e.g. Alex Smith" required>
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail">Your Email *</label>
+                <input type="email" id="senderEmail" class="form-input" placeholder="e.g. alex@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="senderSubject">Subject</label>
+                <input type="text" id="senderSubject" class="form-input" placeholder="e.g. AI Engineer Opportunity / Project Inquiry">
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage">Message *</label>
+                <textarea id="senderMessage" class="form-textarea" placeholder="Hello Yashvi, I came across your portfolio..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>✉️ Dispatch Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="nav-brand">
+        <div class="nav-logo-badge">YP</div>
+        <span>Yashvi Patel</span>
+      </div>
+
+      <p class="footer-tagline">
+        Engineered with passion for artificial intelligence, transformers, and efficient computational algorithms.
+      </p>
+
+      <ul class="footer-links">
+        <li><a href="#about" class="footer-link">About</a></li>
+        <li><a href="#experience" class="footer-link">Experience</a></li>
+        <li><a href="#publication" class="footer-link">Publication</a></li>
+        <li><a href="#projects" class="footer-link">Projects</a></li>
+        <li><a href="#demos" class="footer-link">Demos</a></li>
+        <li><a href="#awards" class="footer-link">Honors</a></li>
+        <li><a href="#contact" class="footer-link">Contact</a></li>
+      </ul>
+
+      <p class="footer-copy">
+        © 2026 Yashvi Patel. All rights reserved. • Hosted with high performance.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal Overlay -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/canvas-bg.js"></script>
+  <script src="js/interactive-demos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

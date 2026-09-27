@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Yashvi Patel - Resume</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 10mm 14mm 12mm 14mm;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Cambria', 'Georgia', 'Times New Roman', serif;
+      font-size: 10pt;
+      line-height: 1.38;
+      color: #111;
+      background: #fff;
+    }
+    .header-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+    }
+    .header-table td {
+      vertical-align: middle;
+    }
+    .photo-col {
+      width: 80px;
+    }
+    .photo-img {
+      width: 78px;
+      height: 98px;
+      object-fit: cover;
+      border-radius: 2px;
+      display: block;
+    }
+    .info-col {
+      text-align: center;
+      padding: 0 10px;
+    }
+    .info-col h1 {
+      font-size: 19pt;
+      font-weight: 700;
+      margin-bottom: 3px;
+      color: #000;
+    }
+    .info-meta {
+      font-size: 9.5pt;
+      color: #222;
+      margin-bottom: 2px;
+    }
+    .info-links a {
+      color: #0044cc;
+      text-decoration: none;
+      font-size: 9.5pt;
+      margin: 0 4px;
+    }
+    .logo-col {
+      width: 85px;
+      text-align: right;
+    }
+    .logo-img {
+      width: 85px;
+      height: auto;
+      display: block;
+      margin-left: auto;
+    }
+    .section-title-bar {
+      background-color: #e9ecef;
+      color: #000;
+      font-size: 11pt;
+      font-weight: 700;
+      padding: 3px 8px;
+      margin: 10px 0 6px 0;
+      border-radius: 2px;
+      text-transform: capitalize;
+    }
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 700;
+      font-size: 10pt;
+    }
+    .entry-sub {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 9.5pt;
+      margin-bottom: 3px;
+    }
+    .tech-stack {
+      font-size: 9pt;
+      font-style: italic;
+      color: #222;
+      margin-bottom: 3px;
+    }
+    .tech-stack strong {
+      font-style: normal;
+    }
+    ul.bullet-list {
+      margin-left: 18px;
+      margin-bottom: 6px;
+    }
+    ul.bullet-list li {
+      font-size: 9.2pt;
+      margin-bottom: 2.5px;
+      line-height: 1.32;
+    }
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9.2pt;
+      margin-bottom: 4px;
+    }
+    .skills-table td {
+      padding: 2.5px 0;
+      vertical-align: top;
+    }
+    .skills-label {
+      width: 155px;
+      font-weight: 700;
+      color: #111;
+    }
+    .skills-val {
+      color: #222;
+    }
+    .award-item {
+      font-size: 9.2pt;
+      margin-bottom: 3px;
+      margin-left: 18px;
+      line-height: 1.35;
+    }
+    .declaration {
+      margin-top: 14px;
+      font-size: 9pt;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    a {
+      color: #0044cc;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <table class="header-table">
+    <tr>
+      <td class="photo-col">
+        <img src="assets/yashvi_patel.jpg" alt="Yashvi Patel" class="photo-img">
+      </td>
+      <td class="info-col">
+        <h1>Yashvi Anilkumar Patel</h1>
+        <div class="info-meta">
+          Roll No: MT26106 | Email: <a href="mailto:yashvipatel856@gmail.com">yashvipatel856@gmail.com</a>
+        </div>
+        <div class="info-meta">
+          DOB: September 20, 2004 &nbsp;|&nbsp; Palanpur, Gujarat, India
+        </div>
+        <div class="info-links">
+          <a href="https://www.linkedin.com/in/yashvi-patel-6a3a37250/" target="_blank">LinkedIn</a> • 
+          <a href="https://github.com/yashvii20" target="_blank">GitHub</a>
+        </div>
+      </td>
+      <td class="logo-col">
+        <img src="assets/iiitd_logo.jpg" alt="IIIT Delhi" class="logo-img">
+      </td>
+    </tr>
+  </table>
+
+  <!-- EDUCATION -->
+  <div class="section-title-bar">Education</div>
+  <div style="margin-bottom: 6px;">
+    <div class="entry-header">
+      <span>Indraprastha Institute of Information Technology Delhi (IIIT-D)</span>
+      <span>2026 — Present</span>
+    </div>
+    <div class="entry-sub">
+      <span>M.Tech in Computer Science and Engineering</span>
+      <span>Roll No: MT26106</span>
+    </div>
+  </div>
+  <div style="margin-bottom: 6px;">
+    <div class="entry-header">
+      <span>Charotar University of Science and Technology</span>
+      <span>CGPA: 9.44/10.0</span>
+    </div>
+    <div class="entry-sub">
+      <span>B.Tech in Computer Science and Engineering</span>
+      <span>2022 — 2026</span>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section-title-bar">Skills</div>
+  <table class="skills-table">
+    <tr>
+      <td class="skills-label">Core Subjects:</td>
+      <td class="skills-val">Data Structures & Algorithms, Operating Systems, DBMS, Theory of Computation</td>
+    </tr>
+    <tr>
+      <td class="skills-label">Languages:</td>
+      <td class="skills-val">C++, Python, Java, JavaScript, SQL, PHP</td>
+    </tr>
+    <tr>
+      <td class="skills-label">Machine Learning / NLP:</td>
+      <td class="skills-val">Hugging Face, T5 Fine-Tuning, Supervised Learning, Model Evaluation, CNN, Computer Vision, MediaPipe</td>
+    </tr>
+    <tr>
+      <td class="skills-label">Databases:</td>
+      <td class="skills-val">PostgreSQL, ClickHouse, MySQL, Supabase</td>
+    </tr>
+    <tr>
+      <td class="skills-label">Web Technologies:</td>
+      <td class="skills-val">HTML, CSS, JavaScript, React 19, Vite, PHP, ASP.NET, Cloudflare Workers, REST APIs</td>
+    </tr>
+  </table>
+
+  <!-- WORK EXPERIENCE -->
+  <div class="section-title-bar">Work Experience</div>
+  
+  <!-- StoreApps -->
+  <div style="margin-bottom: 7px;">
+    <div class="entry-header">
+      <span>AI/ML Engineer Intern — StoreApps, Mumbai</span>
+      <span>May 2025 — Aug 2025</span>
+    </div>
+    <div class="tech-stack">Tech Stack: Python, Hugging Face, T5, PostgreSQL, ClickHouse, SQL, NLP</div>
+    <ul class="bullet-list">
+      <li>Designed and implemented an end-to-end system to translate natural language queries into executable SQL statements.</li>
+      <li>Fine-tuned the T5 (Text-to-Text Transformer) model using Hugging Face for structured text-to-SQL generation.</li>
+      <li>Constructed and curated 5,000+ high-quality NL–SQL pairs for supervised model training.</li>
+      <li>Developed a schema-aware generation and validation pipeline to enforce syntactic and semantic correctness.</li>
+      <li>Integrated PostgreSQL and ClickHouse backends for dynamic query execution and systematic evaluation.</li>
+      <li>Conducted structured error analysis to identify failure cases in joins, aggregations, and nested queries, improving overall model reliability.</li>
+    </ul>
+  </div>
+
+  <!-- Purvi Softech -->
+  <div style="margin-bottom: 7px;">
+    <div class="entry-header">
+      <span>Web Development Intern — Purvi Softech, Palanpur</span>
+      <span>Jun 2024 — Jul 2024</span>
+    </div>
+    <div class="tech-stack">Tech Stack: Web Development, Routing Systems, Real-Time Alerts, PHP, MySQL</div>
+    <ul class="bullet-list">
+      <li>Designed and implemented a smart school bus transportation system.</li>
+      <li>Developed routing and real-time alert modules for enhanced student safety and driver fleet tracking.</li>
+    </ul>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section-title-bar">Projects</div>
+
+  <!-- Atelier / Proj_Management -->
+  <div style="margin-bottom: 7px;">
+    <div class="entry-header">
+      <span>Atelier — Project & Architectural Collaboration Platform</span>
+      <span>Deployed &bull; <a href="https://github.com/yashvii20/Proj_Management" target="_blank">GitHub</a></span>
+    </div>
+    <div class="tech-stack">Tech Stack: React 19, Supabase, Cloudflare Workers, Vite, jsPDF, REST APIs</div>
+    <ul class="bullet-list">
+      <li>Designed and developed a full-stack project management web application for architectural design teams featuring interactive drag-and-drop task boards and visual design mood boards.</li>
+      <li>Architected Supabase backend with PostgreSQL, real-time activity feeds, threaded commenting, and secure JWT authentication.</li>
+      <li>Engineered client-side image compression, automated file cleanup, and dynamic architectural client documentation export using jsPDF.</li>
+      <li>Successfully deployed to production with Cloudflare Workers / Vercel with single-page application (SPA) client-side rewrite routing.</li>
+    </ul>
+  </div>
+
+  <!-- Posture Detection -->
+  <div style="margin-bottom: 7px;">
+    <div class="entry-header">
+      <span>Posture Detection System</span>
+      <span>Jul 2024 — Sept 2024</span>
+    </div>
+    <div class="tech-stack">Tech Stack: Python, MediaPipe, Computer Vision, OpenCV</div>
+    <ul class="bullet-list">
+      <li>Implemented a keypoint-based posture detection system using Python and MediaPipe for real-time classroom posture analysis and automated reporting.</li>
+      <li>Designed a real-time posture monitoring system with an automated feedback mechanism for posture correction.</li>
+    </ul>
+  </div>
+
+  <!-- Skin Cancer Detection -->
+  <div style="margin-bottom: 7px;">
+    <div class="entry-header">
+      <span>Skin Cancer Detection using CNN</span>
+      <span>Deep Learning Project</span>
+    </div>
+    <div class="tech-stack">Tech Stack: Python, CNN, Deep Learning, Image Classification</div>
+    <ul class="bullet-list">
+      <li>Implemented and trained a convolutional neural network for dermoscopic image classification.</li>
+      <li>Applied preprocessing, data augmentation, and regularization techniques to improve model generalization.</li>
+      <li>Evaluated the model using a confusion matrix and classification metrics.</li>
+    </ul>
+  </div>
+
+  <!-- RESEARCH AND PUBLICATION -->
+  <div class="section-title-bar">Research and Publications</div>
+  
+  <!-- Paper 1: IEEE -->
+  <div style="margin-bottom: 7px;">
+    <div class="entry-header">
+      <span>Real-Time Sitting Student Posture Detection for Students in Classroom Environment</span>
+      <span>Jul 2024 — Sept 2024</span>
+    </div>
+    <div class="tech-stack">Tech Stack: Python, MediaPipe, Computer Vision, Pose Estimation</div>
+    <ul class="bullet-list">
+      <li>Designed a real-time posture detection system using Python and MediaPipe with automated ergonomic correction feedback.</li>
+      <li>Presented at ICACRS 2024 and published in <strong>IEEE Xplore</strong>, indexed in <strong>Scopus</strong>.</li>
+      <li>DOI: <a href="https://doi.org/10.1109/ICACRS62842.2024.10841644" target="_blank">10.1109/ICACRS62842.2024.10841644</a></li>
+    </ul>
+  </div>
+
+  <!-- Paper 2: Springer Nature -->
+  <div style="margin-bottom: 7px;">
+    <div class="entry-header">
+      <span>From Campus Life to Career Prospects: Analyzing Key Determinants in Student University Selection</span>
+      <span>Aug 2025</span>
+    </div>
+    <div class="tech-stack">Tech Stack: Data Analytics, Empirical Modeling, Survey Analytics &mdash; <strong>Springer Nature</strong></div>
+    <ul class="bullet-list">
+      <li>Conducted comprehensive statistical and empirical analysis on university selection criteria across 496 student respondents.</li>
+      <li>Published as a conference book chapter in <em>Lecture Notes in Networks and Systems</em> (LNNS, Vol. 1319), ICTCS 2024, <strong>Springer Nature Singapore</strong>.</li>
+      <li>DOI: <a href="https://doi.org/10.1007/978-981-96-4145-1_26" target="_blank">10.1007/978-981-96-4145-1_26</a></li>
+    </ul>
+  </div>
+
+  <!-- AWARDS AND ACHIEVEMENTS -->
+  <div class="section-title-bar">Awards and Achievements</div>
+  <ul class="bullet-list" style="margin-top: 4px;">
+    <li><strong>GATE (CSIT) 2026</strong> — AIR 3011 — Secured <strong>98.5 percentile</strong>.</li>
+    <li><strong>GATE (CSIT) 2025</strong> — AIR 3917 — Secured <strong>97.7 percentile</strong>.</li>
+    <li><strong>NPTEL Certification in Database Management Systems</strong> — Recognized among the <strong>Top 5% performers</strong>.</li>
+    <li><strong>NPTEL Certification in Programming in Java</strong> — Elite Certification.</li>
+    <li><strong>Smart India Hackathon 2024</strong> — Cleared the Initial Round.</li>
+  </ul>
+
+  <!-- DECLARATION -->
+  <div class="section-title-bar">Declaration</div>
+  <div class="declaration">
+    <p>The above information is correct to the best of my knowledge.</p>
+    <p style="margin-top: 4px;"><strong>Name:</strong> Yashvi Patel &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Date:</strong> September 2026</p>
+  </div>
+
+</body>
+</html>
