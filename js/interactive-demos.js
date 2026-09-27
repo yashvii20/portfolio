@@ -280,8 +280,21 @@ function initPostureSimulator() {
   let neckAngle = 12; // degrees
 
   function drawPosture() {
-    const w = canvas.width = 380;
-    const h = canvas.height = 360;
+    const parent = canvas.parentElement;
+    const parentW = parent ? parent.clientWidth : 380;
+    const padding = 24; // accommodate container padding
+    const availW = Math.max(240, parentW - padding);
+    const targetW = Math.min(availW, 380);
+    const scale = targetW / 380;
+    const targetH = Math.round(360 * scale);
+
+    canvas.width = targetW;
+    canvas.height = targetH;
+    
+    ctx.save();
+    ctx.scale(scale, scale);
+    const w = 380;
+    const h = 360;
     
     ctx.clearRect(0, 0, w, h);
     
@@ -481,6 +494,8 @@ function initPostureSimulator() {
         alertBadge.style.background = 'rgba(16, 185, 129, 0.2)';
       }
     }
+
+    ctx.restore();
   }
 
   if (spineSlider) {
@@ -498,6 +513,10 @@ function initPostureSimulator() {
       drawPosture();
     });
   }
+
+  window.addEventListener('resize', () => {
+    drawPosture();
+  });
 
   drawPosture();
 }

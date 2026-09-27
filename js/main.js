@@ -146,6 +146,14 @@ function initMobileMenu() {
       mobileBtn.textContent = '☰';
     });
   });
+
+  // Close mobile drawer when tapping outside
+  document.addEventListener('click', (e) => {
+    if (mobileDrawer.classList.contains('open') && !mobileDrawer.contains(e.target) && !mobileBtn.contains(e.target)) {
+      mobileDrawer.classList.remove('open');
+      mobileBtn.textContent = '☰';
+    }
+  });
 }
 
 /* ==========================================================================
