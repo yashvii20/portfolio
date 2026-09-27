@@ -96,6 +96,14 @@ function initNavbarScroll() {
         link.classList.add('active');
       }
     });
+
+    const mobileBottomItems = document.querySelectorAll('.mobile-bottom-item[data-section]');
+    mobileBottomItems.forEach(item => {
+      item.classList.remove('active');
+      if (item.getAttribute('data-section') === current) {
+        item.classList.add('active');
+      }
+    });
   });
 }
 

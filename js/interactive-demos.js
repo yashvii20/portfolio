@@ -498,10 +498,31 @@ function initPostureSimulator() {
     ctx.restore();
   }
 
+  const presetBtns = document.querySelectorAll('.posture-preset-btn');
+  presetBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      presetBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const targetSpine = parseInt(btn.getAttribute('data-spine')) || 10;
+      const targetNeck = parseInt(btn.getAttribute('data-neck')) || 12;
+      
+      spineAngle = targetSpine;
+      neckAngle = targetNeck;
+      
+      if (spineSlider) spineSlider.value = targetSpine;
+      if (neckSlider) neckSlider.value = targetNeck;
+      if (spineValText) spineValText.textContent = `${targetSpine}°`;
+      if (neckValText) neckValText.textContent = `${targetNeck}°`;
+      
+      drawPosture();
+    });
+  });
+
   if (spineSlider) {
     spineSlider.addEventListener('input', (e) => {
       spineAngle = parseInt(e.target.value);
       if (spineValText) spineValText.textContent = `${spineAngle}°`;
+      presetBtns.forEach(b => b.classList.remove('active'));
       drawPosture();
     });
   }
@@ -510,6 +531,7 @@ function initPostureSimulator() {
     neckSlider.addEventListener('input', (e) => {
       neckAngle = parseInt(e.target.value);
       if (neckValText) neckValText.textContent = `${neckAngle}°`;
+      presetBtns.forEach(b => b.classList.remove('active'));
       drawPosture();
     });
   }
